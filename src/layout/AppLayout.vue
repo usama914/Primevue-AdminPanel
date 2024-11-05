@@ -26,7 +26,7 @@ const containerClass = computed(() => {
         'layout-mobile-active': layoutState.staticMenuMobileActive
     };
 });
-
+// Attaches a click event listener to the document to detect clicks outside the sidebar.
 function bindOutsideClickListener() {
     if (!outsideClickListener.value) {
         outsideClickListener.value = (event) => {
@@ -37,14 +37,14 @@ function bindOutsideClickListener() {
         document.addEventListener('click', outsideClickListener.value);
     }
 }
-
+// Removes the click event listener when the sidebar is closed.
 function unbindOutsideClickListener() {
     if (outsideClickListener.value) {
         document.removeEventListener('click', outsideClickListener);
         outsideClickListener.value = null;
     }
 }
-
+// Attaches a click event listener to the document to detect clicks outside the sidebar.
 function isOutsideClicked(event) {
     const sidebarEl = document.querySelector('.layout-sidebar');
     const topbarEl = document.querySelector('.layout-menu-button');

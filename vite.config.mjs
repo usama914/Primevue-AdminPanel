@@ -1,3 +1,5 @@
+// Auto Import
+// On-demand PrimeVue components with auto imports and tree-shaking.
 import { fileURLToPath, URL } from 'node:url';
 
 import { PrimeVueResolver } from '@primevue/auto-import-resolver';
